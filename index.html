@@ -90,7 +90,7 @@
         <div class="card bg-base-100 shadow-xl">
           <figure><img class="w-64 pt-3" src="images/parallelogram.png" alt="parallelogram image" /></figure>
           <div class="card-body">
-            <h2 class="text-center">Parallelogram</h2>
+            <h2 class="text-center">Rhombus</h2>
             <p class="text-xl text-center">Area (A) = 0.5 x d1 x d2</p>
             <p class="text-xl text-center">d
               1
@@ -100,18 +100,18 @@
               = 8cm</p>
             <div>
               <!-- Rhombus length of diagonal 1  -->
-              <input id="rectangle-length" class="w-20 bg-slate-300 text-xl p-2 border-2 rounded-sm mr-3" type="text"
-                placeholder="d1"><span>cm</span>
+              <input id="rhombus-length1" class="w-20 bg-slate-300 text-xl p-2 border-2 rounded-sm mr-3" type="text"
+                placeholder="length"><span>cm</span>
               <!--Rhombus length of diagonal 2  -->
-              <input id="rectangle-width" class="w-20 text-xl p-2 bg-slate-300 border-2 rounded-sm mr-3" type="text"
-                placeholder="width"><span>cm</span>
+              <input id="rhombus-length2" class="w-20 text-xl p-2 bg-slate-300 border-2 rounded-sm mr-3" type="text"
+                placeholder="length"><span>cm</span>
             </div>
             <div>
-              <p class="text-2xl text-center">Area: <span id="rectangle-area">......</span><span>cm<sup>2</sup></span>
+              <p class="text-2xl text-center">Area: <span id="rhombus-area">......</span><span>cm<sup>2</sup></span>
               </p>
             </div>
             <div class="card-actions">
-              <button class="btn btn-primary w-full">Calculate</button>
+              <button onclick="calculateRhombusArea()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
@@ -119,23 +119,23 @@
         <div class="card bg-base-100 shadow-xl">
           <figure><img class="w-64 pt-3" src="images/parallelogram.png" alt="parallelogram image" /></figure>
           <div class="card-body">
-            <h2 class="text-center">Parallelogram</h2>
-            <p class="text-xl text-center">Area (A) = b x h</p>
-            <p class="text-xl text-center">b=10cm, h=12cm</p>
+            <h2 class="text-center">Pentagon</h2>
+            <p class="text-xl text-center">Area (A) = 0.5 x p x b</p>
+            <p class="text-xl text-center">p = 6cm, b = 10cm</p>
             <div>
-              <!-- rectangle length  -->
-              <input id="rectangle-length" class="w-20 bg-slate-300 text-xl p-2 border-2 rounded-sm mr-3" type="text"
-                placeholder="length"><span>cm</span>
-              <!-- rectangle width  -->
-              <input id="rectangle-width" class="w-20 text-xl p-2 bg-slate-300 border-2 rounded-sm mr-3" type="text"
-                placeholder="width"><span>cm</span>
+              <!-- pentagon perimeter   -->
+              <input id="pentagon-perimeter" class="w-20 bg-slate-300 text-xl p-2 border-2 rounded-sm mr-3" type="text"
+                placeholder="peri"><span>cm</span>
+              <!-- pentagon Apothem -->
+              <input id="pentagon-apothem" class="w-20 text-xl p-2 bg-slate-300 border-2 rounded-sm mr-3" type="text"
+                placeholder="apo"><span>cm</span>
             </div>
             <div>
-              <p class="text-2xl text-center">Area: <span id="rectangle-area">......</span><span>cm<sup>2</sup></span>
+              <p class="text-2xl text-center">Area: <span id="pentagon-area">......</span><span>cm<sup>2</sup></span>
               </p>
             </div>
             <div class="card-actions">
-              <button class="btn btn-primary w-full">Calculate</button>
+              <button onclick="calculatePentagonArea()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
@@ -143,23 +143,23 @@
         <div class="card bg-base-100 shadow-xl">
           <figure><img class="w-64 pt-3" src="images/parallelogram.png" alt="parallelogram image" /></figure>
           <div class="card-body">
-            <h2 class="text-center">Parallelogram</h2>
-            <p class="text-xl text-center">Area (A) = 0.5 x d1 x d2</p>
-            <p class="text-xl text-center">b=10cm, h=12cm</p>
+            <h2 class="text-center">Ellipse</h2>
+            <p class="text-xl text-center">Area (A) = &#960; ab</p>
+            <p class="text-xl text-center">a = 10cm, b = 4cm</p>
             <div>
-              <!-- rectangle length  -->
-              <input id="rectangle-length" class="w-20 bg-slate-300 text-xl p-2 border-2 rounded-sm mr-3" type="text"
-                placeholder="length"><span>cm</span>
-              <!-- rectangle width  -->
-              <input id="rectangle-width" class="w-20 text-xl p-2 bg-slate-300 border-2 rounded-sm mr-3" type="text"
-                placeholder="width"><span>cm</span>
+              <!-- Ellipse major radius  -->
+              <input id="ellipse-major-radius" class="w-20 bg-slate-300 text-xl p-2 border-2 rounded-sm mr-3" type="text"
+                placeholder="major"><span>cm</span>
+              <!-- Ellipse minor radius  -->
+              <input id="ellipse-minor-radius" class="w-20 text-xl p-2 bg-slate-300 border-2 rounded-sm mr-3" type="text"
+                placeholder="minor"><span>cm</span>
             </div>
             <div>
-              <p class="text-2xl text-center">Area: <span id="rectangle-area">......</span><span>cm<sup>2</sup></span>
+              <p class="text-2xl text-center">Area: <span id="ellipse-area">......</span><span>cm<sup>2</sup></span>
               </p>
             </div>
             <div class="card-actions">
-              <button class="btn btn-primary w-full">Calculate</button>
+              <button onclick="calculateEllipseArea()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
@@ -175,9 +175,12 @@
   </main>
 
 
-  <script srcX="js/parallelogram.js"></script>
+  <script src="js/parallelogram.js"></script>
   <script src="js/triangle-calculation.js"></script>
   <script src="js/rectangle-area.js"></script>
+  <script src="js/rhombus-area.js"></script>
+  <script src="js/pentagon-area.js"></script>;
+  <script src="js/ellipse-area.js"></script>
 </body>
 
 </html>
